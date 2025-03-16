@@ -1,0 +1,132 @@
+/* Centrer la section logo et aligner les éléments horizontalement */
+.logo {
+    display: flex;
+    align-items: center; /* Centrer les éléments verticalement */
+    justify-content: center; /* Centrer les éléments horizontalement */
+  }
+  
+  /* S'assurer que le logo et le texte ne débordent pas et sont bien espacés */
+  .logo img {
+    margin-right: 10px; /* Espacer le logo du texte */
+  }
+  
+  .logo a {
+    text-decoration: none; /* Supprimer les soulignements du lien */
+    display: flex;
+    align-items: center; /* Centrer le texte verticalement */
+  }
+  
+  /* Optionnel: modifier la taille des images si nécessaire */
+  .logo img.logo-dark, .logo img.logo-white {
+    max-height: 40px; /* Taille des logos */
+  }
+  .name-nav{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #bd0b4d;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Poppins', sans-serif;
+  }
+  .modern-service-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .modern-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .modern-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #bd0b4d, #ff6f61);
+  }
+
+  .image-wrapper {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 150px; /* Ajustez selon la taille de votre image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .modern-service-card:hover .service-image {
+    transform: scale(1.05); /* Effet de zoom léger au survol */
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+  }
+
+  .service-features li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .feature-icon {
+    color: #bd0b4d;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+
+  .card-description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .card-cta {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #bd0b4d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .card-cta:hover {
+    background: #a30842;
+  }
+  .fa-brands {
+    color: #a30842;
+  }

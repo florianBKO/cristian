@@ -39,20 +39,72 @@ body {
 
 /* Services */
 .service-card {
-  border: 2px solid var(--color-bordeaux);
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
   transition: all 0.3s ease;
+  border: 2px solid var(--color-bordeaux);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
-  background-color: var(--color-bordeaux);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(128, 0, 32, 0.1);
 }
 
-.service-card .icon {
+.icon-wrapper {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.service-icon {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.05);
+}
+
+.service-card h3 {
   color: var(--color-bordeaux);
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.service-card:hover .icon {
-  color: white;
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.service-features li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-features li:before {
+  content: "•";
+  color: var(--color-bordeaux);
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.service-card p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+  flex-grow: 1;
 }
 
 /* Contact */
@@ -79,4 +131,19 @@ body {
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-icon {
+    height: 150px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
 }
